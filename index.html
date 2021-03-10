@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✍️ It's time for me to write today</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+   
+<style>
+
+    body {
+        background-color: #121212;
+        font-family: 'Indie Flower', cursive;
+    }
+
+    input, textarea {
+        background-color:  #616E7C;
+        color: white;
+        resize: none;
+        border-style: none;
+        justify-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Alegreya', cursive;
+        font-size: 18px;
+    }   
+
+    .inputtext:focus{
+        border: 0 none;
+        overflow: hidden;
+        outline:none;
+        color: aliceblue;
+    
+    }
+
+    .header {
+        background-color: #616E7C;
+        height: 70px;
+        width: 600px;
+        margin: 0 auto;
+        display: flex;
+        color: #b4eea1;
+        font-weight: bolder;
+        font-family: 'Indie Flower', cursive;
+        font-size: 40px;
+        font-weight: bolder;
+        justify-content: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .subtext {
+        background-color: #616E7C;
+        width: 600px;
+        height: 80px;
+        margin: 0 auto;
+        font-family: 'Reenie Beanie', cursive;
+        padding-top: 5px;
+        font-size: 32px;
+        font-weight: bolder;
+        text-align: center;
+     
+    }
+    .button {
+        background-color: #efc7a3;
+        border: none;
+        color: #000000;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+}
+
+    .buttonCopy {
+            background-color: #729666;
+            border: none;
+            color: #e2e2e2;
+            padding: 12px 12px;
+            margin: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+    }
+
+    .writefield {
+        background-color: #616E7C;
+        height: 570px;
+        width: 600px;
+        margin: 0 auto;
+        padding-top: 30px;
+        justify-content: center;
+        color: #6bb37e;
+        font-weight: bolder;
+        font-family: 'Press Start 2P', cursive;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .writeit {
+        background-color: #616E7C;
+    }
+
+    .textnormal {
+        color: #7c8998;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .inspiration {
+        background-color: #616E7C;
+        width: 600px;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #myDIV {
+        text-align: center;       
+        margin-top: 0px;
+    }
+
+    #myDIV {
+        text-align: center;       
+        margin-top: 0px;
+        color: aliceblue;
+        
+    }
+
+    ::placeholder { 
+    color: #9E9E9E;
+    opacity: 1; 
+    }
+
+    a:link, a:visited {
+    color: #9E9E9E;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .made-by {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+    border-top-left-radius: 5px;
+    padding: 6px;
+
+    
+    color: #6f6f6f;
+    text-decoration: none;
+    }
+
+    .made-by p {
+    margin: 0;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 7px;
+    font-weight: 500;
+    font-size: 14px;
+    }
+
+    input[type='text'] {width:50px;}
+      textarea {width:500px;height:300px;}
+
+</style>
+
+</head>
+<body>
+    <div class="header"> 
+        <p>iwrite2day.xyz</p> <br>      
+    </div> 
+    <div class="subtext">
+        <p>Create your writing habit by writing 99 words per day</p>
+    </div>  
+
+    </div>
+    <div class="writefield"> 
+        <p></p> 
+        <p class="textnormal"> 
+        <textarea class="inputtext" placeholder="Start writing!" id="toCount" autofocus></textarea>
+        <span id="wordCount">0</span> words
+        <br>
+        <br>
+        <button class="buttonCopy" onclick="myClipboard()">Copy text</button> 
+        <br>
+        <br>
+        Get a prompt 
+        <br>
+        <button onclick="myFunctionGif()" class="button">Gif </button>
+        <button onclick="myFunctionImage()" class="button">Image </button>  
+        <button onclick="myFunctionText()" class="button">Text </button>      
+        <div class="inspiration"> 
+            <div id="myGifDIV" style="display: none;">
+                What happened? <br>
+            <img src="https://i.ibb.co/fHv44n3/man-holding-camera-beach.gif" alt="">
+            </div>
+            <div id="myImageDIV" style="display: none;">
+                Who is this? <br>
+                <img src="https://i.ibb.co/kx86Xb8/lynx-small.png" alt=""> <br>
+            </div>
+            <div id="myTextDIV" style="display: none;">
+                Write a horror scene with a monster inspired <br> 
+                by something mundane that frustrates you often <br>
+                in your real world day to day life.<br>
+                <a href="https://www.reddit.com/r/WritingPrompts/comments/m13k7f/wp_write_a_horror_scene_with_a_monster_inspired/" target="_blank">Source</a>
+            </div>
+      </div> 
+      
+
+    </p>
+     
+      
+    </div>
+    
+    <script>
+
+    document.getElementById('toCount').addEventListener('input', function () {
+        var text = this.value,
+
+        count = text.trim().split(' ').length;
+
+        document.querySelector('#wordCount').textContent = count;
+       
+        if (count == 99) {
+            confetti();
+        }
+        
+
+
+    });
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+<script>
+    function myFunctionGif() {
+      var x = document.getElementById("myGifDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } ;
+
+    function myFunctionText() {
+      var x = document.getElementById("myTextDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } ;
+
+    function myFunctionImage() {
+      var x = document.getElementById("myImageDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } ;
+
+    function myClipboard() {
+    var copyText = document.getElementById("toCount");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+    }
+
+    </script>
+<a href="https://www.twitter.com/futurefounder21" class="made-by" target="_blank"> <p>by FutureFounder</p> </a>
+</body>
+</html>
